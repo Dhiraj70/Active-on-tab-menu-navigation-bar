@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contaner">
+
+        <div class="menu-wrapper">
+            <div class="navbar" id="navbar">
+                <li><a class="btn active" href="#">home</a></li>
+                <li><a class="btn" href="#">home</a></li>
+                <li><a class="btn" href="#">home</a></li>
+                <li><a class="btn" href="#">home</a></li>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btncontainer = document.getElementById("navbar");
+        let btns = document.getElementsByClassName("btn");
+
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active");
+                this.className += " active"
+            })
+        }
+    </script>
+
+</body>
+
+</html>
